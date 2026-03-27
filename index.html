@@ -3,132 +3,538 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== SEO Meta Tags ===== -->
     <title>Adeel Afzal Portfolio</title>
+    <meta name="description" content="Adeel Afzal - Full Stack Web Developer from Faisalabad, Pakistan. Expert in HTML, CSS, JavaScript and React. View projects, blog, and contact me.">
+    <meta name="keywords" content="Adeel Afzal, Web Developer, Full Stack Developer, React Developer, Faisalabad Pakistan, Frontend Developer, Portfolio, Blog, HTML CSS JavaScript">
+    <meta name="author" content="Adeel Afzal">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://adeelafzalwork-jp.github.io/portfolio/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Adeel Afzal | Full Stack Web Developer">
+    <meta property="og:description" content="Full Stack Web Developer creating modern, fast, responsive websites. Based in Faisalabad, Pakistan.">
+    <meta property="og:url" content="https://adeelafzalwork-jp.github.io/portfolio/">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Adeel Afzal | Web Developer Portfolio">
+    <meta name="twitter:description" content="Full Stack Developer — HTML, CSS, JS, React. Faisalabad, Pakistan.">
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Adeel Afzal",
+      "jobTitle": "Full Stack Web Developer",
+      "url": "https://adeelafzalwork-jp.github.io/portfolio/",
+      "email": "adeel.afzal.work@gmail.com",
+      "telephone": "+92 3064492183",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Faisalabad",
+        "addressCountry": "Pakistan"
+      }
+    }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Header / Logo -->
+    <!-- ===== HEADER ===== -->
     <header>
         <div class="logo">
             <h1>Adeel Afzal</h1>
         </div>
         <nav>
-            <ul>
+            <ul id="navMenu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#blog">Blog</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
+        <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+            <span></span><span></span><span></span>
+        </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <h2>Hi, I'm Adeel Afzal</h2>
-        <p>A passionate Web Developer creating modern and responsive websites.</p>
-        <a href="#projects" class="btn">View My Work</a>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <h2>About Me</h2>
-        <p>Hello! I am Adeel Afzal, a full-stack web developer based in Faisalabad, Pakistan. I love turning ideas into interactive and beautiful websites. I have experience in HTML, CSS, JavaScript, and modern frameworks like React.</p>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <h2>My Skills</h2>
-        <div class="skill-list">
-            <div class="skill">
-                <h3>HTML & CSS</h3>
-                <div class="skill-bar"><div class="skill-level" style="width: 95%;"></div></div>
+    <!-- ===== HERO ===== -->
+    <section id="home">
+        <div class="hero-bg"></div>
+        <div class="hero-grid"></div>
+        <div class="hero-content">
+            <div class="hero-badge">Available for freelance work</div>
+            <h2>Hi, I'm <span class="grad">Adeel Afzal</span></h2>
+            <p class="hero-desc">A passionate Full Stack Web Developer crafting modern, fast, and responsive websites that make a real impact.</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">View My Work ↗</a>
+                <a href="#contact" class="btn btn-outline">Hire Me</a>
             </div>
-            <div class="skill">
-                <h3>JavaScript</h3>
-                <div class="skill-bar"><div class="skill-level" style="width: 85%;"></div></div>
-            </div>
-            <div class="skill">
-                <h3>React</h3>
-                <div class="skill-bar"><div class="skill-level" style="width: 80%;"></div></div>
-            </div>
-            <div class="skill">
-                <h3>Git & GitHub</h3>
-                <div class="skill-bar"><div class="skill-level" style="width: 90%;"></div></div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-num">10+</div>
+                    <div class="stat-label">Projects Done</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-num">2+</div>
+                    <div class="stat-label">Years Exp</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-num">100%</div>
+                    <div class="stat-label">Satisfaction</div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <h2>My Projects</h2>
-        <div class="project-cards">
-            <div class="project-card">
-                <h3>Personal Portfolio</h3>
-                <p>A modern responsive portfolio website to showcase my projects and skills.</p>
-                <a href="https://adeelafzalwork-jp.github.io/portfolio/" target="_blank" class="btn-small">View Live</a>
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="section-pad">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Who I Am</span>
+                <h2>About Me</h2>
             </div>
-            <div class="project-card">
-                <h3>Todo App</h3>
-                <p>A JavaScript-based Todo application to manage tasks with add, edit, delete functionality.</p>
-                <a href="#" class="btn-small">View Live</a>
-            </div>
-            <div class="project-card">
-                <h3>Weather App</h3>
-                <p>Realtime weather app using OpenWeather API to check weather anywhere in the world.</p>
-                <a href="#" class="btn-small">View Live</a>
+            <div class="about-grid">
+                <div class="about-visual">
+                    <div class="about-card">
+                        <div class="about-glow"></div>
+                        <div class="about-avatar">AA</div>
+                        <div class="about-name">Adeel Afzal</div>
+                        <div class="about-role">Full Stack Web Developer</div>
+                        <div class="about-tags">
+                            <span class="tag">HTML & CSS</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">React</span>
+                            <span class="tag">Git & GitHub</span>
+                            <span class="tag">Faisalabad, PK</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h3>Turning Ideas Into Reality</h3>
+                    <p>Hello! I am Adeel Afzal, a full-stack web developer based in Faisalabad, Pakistan. I love turning ideas into interactive and beautiful websites.</p>
+                    <p>With strong expertise in frontend technologies and a passion for clean, efficient code, I build digital experiences that are not just functional — but truly memorable.</p>
+                    <ul class="about-list">
+                        <li>2+ years of hands-on web development experience</li>
+                        <li>Proficient in React, JavaScript, HTML & CSS</li>
+                        <li>Focus on responsive, SEO-friendly design</li>
+                        <li>Open for freelance and remote projects</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">Let's Work Together</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2>Contact Me</h2>
-        <p>If you want to work together or have any questions, feel free to send me a message.</p>
-
-        <!-- WhatsApp Form -->
-        <form id="whatsappForm">
-            <input type="text" name="name" id="name" placeholder="Your Name" required>
-            <input type="email" name="email" id="email" placeholder="Your Email" required>
-            <textarea name="message" id="message" placeholder="Your Message" required></textarea>
-            <button type="submit" class="btn">Send Message via WhatsApp</button>
-        </form>
-
-        <div class="contact-info">
-            <p>Email: adeel.afzal.work@gmail.com</p>
-            <p>Phone: +92 3064492183</p>
-            <a href="https://wa.me/923064492183?text=Hello%20Adeel!" target="_blank" class="whatsapp-btn">
-                Chat on WhatsApp
-            </a>
+    <!-- ===== SKILLS ===== -->
+    <section id="skills" class="section-pad">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">What I Know</span>
+                <h2>My Skills</h2>
+                <p>Technologies I work with to build great digital experiences.</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <div class="skill-top">
+                        <span class="skill-name"><span class="skill-icon">🎨</span> HTML & CSS</span>
+                        <span class="skill-percent">95%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-level" style="width:95%"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-top">
+                        <span class="skill-name"><span class="skill-icon">⚡</span> JavaScript</span>
+                        <span class="skill-percent">85%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-level" style="width:85%"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-top">
+                        <span class="skill-name"><span class="skill-icon">⚛️</span> React</span>
+                        <span class="skill-percent">80%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-level" style="width:80%"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-top">
+                        <span class="skill-name"><span class="skill-icon">🐙</span> Git & GitHub</span>
+                        <span class="skill-percent">90%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-level" style="width:90%"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-top">
+                        <span class="skill-name"><span class="skill-icon">📱</span> Responsive Design</span>
+                        <span class="skill-percent">92%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-level" style="width:92%"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-top">
+                        <span class="skill-name"><span class="skill-icon">🔍</span> SEO Optimization</span>
+                        <span class="skill-percent">78%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-level" style="width:78%"></div></div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- ===== PROJECTS ===== -->
+    <section id="projects" class="section-pad">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">My Work</span>
+                <h2>Projects</h2>
+                <p>Some of the projects I have built with passion and precision.</p>
+            </div>
+            <div class="projects-grid">
+
+                <!-- Project 1: Portfolio -->
+                <div class="project-card">
+                    <div class="project-thumb">
+                        <svg viewBox="0 0 400 190" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+                            <defs>
+                                <linearGradient id="pg1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#071a2f"/>
+                                    <stop offset="100%" style="stop-color:#0d2d50"/>
+                                </linearGradient>
+                                <linearGradient id="acc1" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#00e5ff"/>
+                                    <stop offset="100%" style="stop-color:#7c3aed"/>
+                                </linearGradient>
+                            </defs>
+                            <!-- BG -->
+                            <rect width="400" height="190" fill="url(#pg1)"/>
+                            <!-- Grid lines -->
+                            <line x1="0" y1="38" x2="400" y2="38" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+                            <line x1="0" y1="76" x2="400" y2="76" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+                            <line x1="0" y1="114" x2="400" y2="114" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+                            <line x1="0" y1="152" x2="400" y2="152" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+                            <line x1="80" y1="0" x2="80" y2="190" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+                            <line x1="160" y1="0" x2="160" y2="190" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+                            <line x1="240" y1="0" x2="240" y2="190" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+                            <line x1="320" y1="0" x2="320" y2="190" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+                            <!-- Nav bar mockup -->
+                            <rect x="20" y="14" width="360" height="22" rx="5" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+                            <rect x="28" y="21" width="40" height="8" rx="3" fill="url(#acc1)" opacity="0.9"/>
+                            <rect x="278" y="22" width="28" height="6" rx="3" fill="rgba(255,255,255,0.12)"/>
+                            <rect x="314" y="22" width="28" height="6" rx="3" fill="rgba(255,255,255,0.12)"/>
+                            <rect x="350" y="22" width="22" height="6" rx="3" fill="rgba(255,255,255,0.12)"/>
+                            <!-- Hero text mockup -->
+                            <rect x="40" y="50" width="180" height="14" rx="4" fill="url(#acc1)" opacity="0.7"/>
+                            <rect x="40" y="70" width="140" height="8" rx="3" fill="rgba(255,255,255,0.18)"/>
+                            <rect x="40" y="84" width="120" height="8" rx="3" fill="rgba(255,255,255,0.10)"/>
+                            <!-- CTA Button -->
+                            <rect x="40" y="100" width="80" height="22" rx="11" fill="url(#acc1)" opacity="0.85"/>
+                            <rect x="130" y="100" width="68" height="22" rx="11" fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+                            <!-- Right side decoration -->
+                            <circle cx="310" cy="100" r="50" fill="none" stroke="url(#acc1)" stroke-width="1" opacity="0.3"/>
+                            <circle cx="310" cy="100" r="35" fill="none" stroke="url(#acc1)" stroke-width="1" opacity="0.2"/>
+                            <circle cx="310" cy="100" r="20" fill="rgba(0,229,255,0.12)"/>
+                            <text x="299" y="106" font-family="sans-serif" font-size="16" fill="rgba(0,229,255,0.8)">AA</text>
+                            <!-- Dots -->
+                            <circle cx="340" cy="55" r="3" fill="#00e5ff" opacity="0.5"/>
+                            <circle cx="355" cy="70" r="2" fill="#7c3aed" opacity="0.5"/>
+                            <circle cx="270" cy="145" r="4" fill="#00e5ff" opacity="0.3"/>
+                        </svg>
+                        <div class="thumb-overlay"></div>
+                    </div>
+                    <div class="project-body">
+                        <h3>Personal Portfolio</h3>
+                        <p>A modern responsive portfolio website to showcase projects and skills with smooth animations.</p>
+                        <div class="project-techs">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <a href="https://adeelafzalwork-jp.github.io/portfolio/" target="_blank" class="btn-small">View Live ↗</a>
+                    </div>
+                </div>
+
+                <!-- Project 2: Todo App -->
+                <div class="project-card">
+                    <div class="project-thumb">
+                        <svg viewBox="0 0 400 190" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+                            <defs>
+                                <linearGradient id="pg2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#0e0f1a"/>
+                                    <stop offset="100%" style="stop-color:#1a0b35"/>
+                                </linearGradient>
+                            </defs>
+                            <rect width="400" height="190" fill="url(#pg2)"/>
+                            <!-- App header -->
+                            <rect x="20" y="12" width="360" height="30" rx="6" fill="rgba(124,58,237,0.15)" stroke="rgba(124,58,237,0.25)" stroke-width="1"/>
+                            <text x="36" y="32" font-family="sans-serif" font-size="12" font-weight="bold" fill="#a78bfa">📋 Todo App</text>
+                            <!-- Input bar -->
+                            <rect x="20" y="52" width="290" height="26" rx="6" fill="rgba(255,255,255,0.04)" stroke="rgba(124,58,237,0.3)" stroke-width="1"/>
+                            <text x="32" y="69" font-family="sans-serif" font-size="10" fill="rgba(255,255,255,0.25)">Add a new task...</text>
+                            <rect x="318" y="52" width="62" height="26" rx="6" fill="rgba(124,58,237,0.6)"/>
+                            <text x="332" y="69" font-family="sans-serif" font-size="10" fill="white" font-weight="bold">+ Add</text>
+                            <!-- Todo items -->
+                            <rect x="20" y="88" width="360" height="24" rx="5" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+                            <circle cx="36" cy="100" r="7" fill="none" stroke="#22c55e" stroke-width="2"/>
+                            <circle cx="36" cy="100" r="4" fill="#22c55e"/>
+                            <text x="52" y="104" font-family="sans-serif" font-size="10" fill="rgba(255,255,255,0.5)" text-decoration="line-through">Design homepage layout</text>
+                            <rect x="20" y="120" width="360" height="24" rx="5" fill="rgba(124,58,237,0.08)" stroke="rgba(124,58,237,0.2)" stroke-width="1"/>
+                            <circle cx="36" cy="132" r="7" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+                            <text x="52" y="136" font-family="sans-serif" font-size="10" fill="rgba(255,255,255,0.75)">Build contact form</text>
+                            <rect x="20" y="152" width="360" height="24" rx="5" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+                            <circle cx="36" cy="164" r="7" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+                            <text x="52" y="168" font-family="sans-serif" font-size="10" fill="rgba(255,255,255,0.75)">Add dark mode toggle</text>
+                            <!-- Edit / delete icons -->
+                            <text x="356" y="136" font-family="sans-serif" font-size="11" fill="rgba(255,255,255,0.25)">✏</text>
+                            <text x="370" y="136" font-family="sans-serif" font-size="11" fill="rgba(255,100,100,0.4)">✕</text>
+                        </svg>
+                        <div class="thumb-overlay"></div>
+                    </div>
+                    <div class="project-body">
+                        <h3>Todo App</h3>
+                        <p>A JavaScript-based Todo application to manage tasks with add, edit, delete and local storage functionality.</p>
+                        <div class="project-techs">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">LocalStorage</span>
+                        </div>
+                        <a href="#" class="btn-small">View Live ↗</a>
+                    </div>
+                </div>
+
+                <!-- Project 3: Weather App -->
+                <div class="project-card">
+                    <div class="project-thumb">
+                        <svg viewBox="0 0 400 190" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+                            <defs>
+                                <linearGradient id="pg3" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#051525"/>
+                                    <stop offset="100%" style="stop-color:#0a2540"/>
+                                </linearGradient>
+                                <linearGradient id="sun" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#f59e0b"/>
+                                    <stop offset="100%" style="stop-color:#ef4444"/>
+                                </linearGradient>
+                            </defs>
+                            <rect width="400" height="190" fill="url(#pg3)"/>
+                            <!-- Clouds bg decoration -->
+                            <ellipse cx="320" cy="40" rx="55" ry="22" fill="rgba(255,255,255,0.04)"/>
+                            <ellipse cx="345" cy="32" rx="40" ry="18" fill="rgba(255,255,255,0.04)"/>
+                            <!-- Search bar -->
+                            <rect x="20" y="12" width="250" height="26" rx="13" fill="rgba(255,255,255,0.06)" stroke="rgba(0,229,255,0.25)" stroke-width="1"/>
+                            <text x="35" y="29" font-family="sans-serif" font-size="10" fill="rgba(255,255,255,0.4)">🔍  Search city...</text>
+                            <rect x="278" y="12" width="62" height="26" rx="13" fill="rgba(0,229,255,0.25)"/>
+                            <text x="292" y="29" font-family="sans-serif" font-size="10" fill="white" font-weight="bold">Search</text>
+                            <!-- Main weather card -->
+                            <rect x="20" y="48" width="170" height="130" rx="12" fill="rgba(255,255,255,0.04)" stroke="rgba(0,229,255,0.12)" stroke-width="1"/>
+                            <text x="35" y="72" font-family="sans-serif" font-size="11" fill="rgba(255,255,255,0.5)">Faisalabad, PK</text>
+                            <text x="35" y="105" font-family="sans-serif" font-size="34" font-weight="bold" fill="white">32°C</text>
+                            <text x="35" y="122" font-family="sans-serif" font-size="11" fill="rgba(0,229,255,0.7)">☀️  Sunny</text>
+                            <text x="35" y="152" font-family="sans-serif" font-size="9" fill="rgba(255,255,255,0.3)">Humidity: 45%  Wind: 12km/h</text>
+                            <text x="35" y="168" font-family="sans-serif" font-size="9" fill="rgba(255,255,255,0.3)">Feels like: 35°C</text>
+                            <!-- Sun decoration -->
+                            <circle cx="340" cy="105" r="28" fill="url(#sun)" opacity="0.15"/>
+                            <circle cx="340" cy="105" r="20" fill="url(#sun)" opacity="0.25"/>
+                            <text x="322" y="114" font-family="sans-serif" font-size="30">☀️</text>
+                            <!-- Mini forecast cards -->
+                            <rect x="205" y="130" width="46" height="46" rx="8" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+                            <text x="215" y="148" font-family="sans-serif" font-size="11">🌤</text>
+                            <text x="214" y="165" font-family="sans-serif" font-size="9" fill="rgba(255,255,255,0.5)">Mon</text>
+                            <rect x="258" y="130" width="46" height="46" rx="8" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+                            <text x="268" y="148" font-family="sans-serif" font-size="11">🌧</text>
+                            <text x="269" y="165" font-family="sans-serif" font-size="9" fill="rgba(255,255,255,0.5)">Tue</text>
+                            <rect x="311" y="130" width="46" height="46" rx="8" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+                            <text x="321" y="148" font-family="sans-serif" font-size="11">☀️</text>
+                            <text x="322" y="165" font-family="sans-serif" font-size="9" fill="rgba(255,255,255,0.5)">Wed</text>
+                        </svg>
+                        <div class="thumb-overlay"></div>
+                    </div>
+                    <div class="project-body">
+                        <h3>Weather App</h3>
+                        <p>Realtime weather app using OpenWeather API to check weather anywhere in the world instantly.</p>
+                        <div class="project-techs">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">API</span>
+                            <span class="tech-tag">CSS</span>
+                        </div>
+                        <a href="#" class="btn-small">View Live ↗</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== BLOG ===== -->
+    <section id="blog" class="section-pad">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">My Thoughts</span>
+                <h2>Latest Blog Posts</h2>
+                <p>I write about web development, tips, and the latest tech trends.</p>
+            </div>
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-thumb blog-thumb-1">💻</div>
+                    <div class="blog-body">
+                        <div class="blog-meta">
+                            <span class="blog-cat">HTML & CSS</span>
+                            <span class="blog-date">Mar 10, 2026</span>
+                        </div>
+                        <h3>Top 10 CSS Tricks Every Developer Should Know</h3>
+                        <p>Master these powerful CSS techniques to write cleaner, more efficient code and build stunning layouts faster.</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-thumb blog-thumb-2">⚛️</div>
+                    <div class="blog-body">
+                        <div class="blog-meta">
+                            <span class="blog-cat">React</span>
+                            <span class="blog-date">Feb 22, 2026</span>
+                        </div>
+                        <h3>Getting Started with React Hooks in 2026</h3>
+                        <p>A beginner-friendly guide to useState, useEffect, and custom hooks with real project examples you can use today.</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-thumb blog-thumb-3">🔍</div>
+                    <div class="blog-body">
+                        <div class="blog-meta">
+                            <span class="blog-cat">SEO</span>
+                            <span class="blog-date">Jan 15, 2026</span>
+                        </div>
+                        <h3>How to Make Your Website Rank #1 on Google</h3>
+                        <p>Practical SEO strategies for developers — from meta tags and structured data to page speed and Core Web Vitals.</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT (ORIGINAL - SAME) ===== -->
+    <section id="contact" class="section-pad">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Get In Touch</span>
+                <h2>Contact Me</h2>
+                <p>If you want to work together or have any questions, feel free to send me a message.</p>
+            </div>
+            <div class="contact-wrapper">
+                <div class="contact-left">
+                    <h3>Let's Build Something Amazing</h3>
+                    <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
+                    <div class="contact-details">
+                        <div class="contact-row">
+                            <div class="contact-icon">📧</div>
+                            <span>adeel.afzal.work@gmail.com</span>
+                        </div>
+                        <div class="contact-row">
+                            <div class="contact-icon">📞</div>
+                            <span>+92 3064492183</span>
+                        </div>
+                        <div class="contact-row">
+                            <div class="contact-icon">📍</div>
+                            <span>Faisalabad, Pakistan</span>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/923064492183?text=Hello%20Adeel!" target="_blank" class="whatsapp-btn">
+                        💬 Chat on WhatsApp
+                    </a>
+                </div>
+
+                <div class="contact-form">
+                    <h3>Send a Message</h3>
+                    <form id="whatsappForm">
+                        <div class="form-group">
+                            <input type="text" name="name" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" id="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" id="message" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message via WhatsApp 🚀</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
     <footer>
+        <span class="footer-logo">Adeel Afzal</span>
         <p>&copy; 2026 Adeel Afzal. All Rights Reserved.</p>
+        <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#blog">Blog</a>
+            <a href="#contact">Contact</a>
+        </div>
     </footer>
 
-    <!-- WhatsApp Form Script -->
+    <!-- Back to Top -->
+    <button id="back-top" onclick="scrollToTop()">↑</button>
+
+    <!-- ===== SCRIPTS ===== -->
     <script>
-    document.getElementById('whatsappForm').addEventListener('submit', function(e){
-        e.preventDefault(); // Prevent normal form submission
+        // WhatsApp Form (ORIGINAL - SAME)
+        document.getElementById('whatsappForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            let name = document.getElementById('name').value;
+            let email = document.getElementById('email').value;
+            let message = document.getElementById('message').value;
+            let fullMessage = `Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
+            let whatsappNumber = "923064492183";
+            let url = `https://wa.me/${whatsappNumber}?text=${fullMessage}`;
+            window.open(url, '_blank');
+        });
 
-        // Get form values
-        let name = document.getElementById('name').value;
-        let email = document.getElementById('email').value;
-        let message = document.getElementById('message').value;
+        // Hamburger menu
+        function toggleMenu() {
+            document.getElementById('navMenu').classList.toggle('open');
+        }
+        // Close menu on link click
+        document.querySelectorAll('#navMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navMenu').classList.remove('open');
+            });
+        });
 
-        // Combine into WhatsApp text
-        let fullMessage = `Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
+        // Back to Top
+        window.addEventListener('scroll', () => {
+            document.getElementById('back-top').classList.toggle('show', window.scrollY > 400);
+        });
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
 
-        // Your WhatsApp number
-        let whatsappNumber = "923064492183";
-
-        // Open WhatsApp link
-        let url = `https://wa.me/${whatsappNumber}?text=${fullMessage}`;
-        window.open(url, '_blank');
-    });
+        // Active nav highlight on scroll
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('nav ul li a');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(sec => {
+                if (window.scrollY >= sec.offsetTop - 100) current = sec.getAttribute('id');
+            });
+            navLinks.forEach(link => {
+                link.style.color = (link.getAttribute('href') === '#' + current) ? 'var(--accent)' : '';
+            });
+        });
     </script>
 
 </body>
