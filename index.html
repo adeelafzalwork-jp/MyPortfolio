@@ -3,27 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- ===== SEO Meta Tags ===== -->
     <title>Adeel Afzal Portfolio</title>
-    <meta name="description" content="Adeel Afzal - Full Stack Web Developer from Faisalabad, Pakistan. Expert in HTML, CSS, JavaScript and React. View projects, blog, and contact me.">
-    <meta name="keywords" content="Adeel Afzal, Web Developer, Full Stack Developer, React Developer, Faisalabad Pakistan, Frontend Developer, Portfolio, Blog, HTML CSS JavaScript">
+    <meta name="description" content="Adeel Afzal - Full Stack Web Developer from Faisalabad, Pakistan. Expert in HTML, CSS, JavaScript and React.">
+    <meta name="keywords" content="Adeel Afzal, Web Developer, Full Stack Developer, React Developer, Faisalabad Pakistan">
     <meta name="author" content="Adeel Afzal">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://adeelafzalwork-jp.github.io/portfolio/">
-
-    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Adeel Afzal | Full Stack Web Developer">
-    <meta property="og:description" content="Full Stack Web Developer creating modern, fast, responsive websites. Based in Faisalabad, Pakistan.">
+    <meta property="og:description" content="Full Stack Web Developer creating modern, fast, responsive websites.">
     <meta property="og:url" content="https://adeelafzalwork-jp.github.io/portfolio/">
-
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Adeel Afzal | Web Developer Portfolio">
-    <meta name="twitter:description" content="Full Stack Developer — HTML, CSS, JS, React. Faisalabad, Pakistan.">
-
-    <!-- Schema.org -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -40,336 +31,341 @@
       }
     }
     </script>
-
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
-
-    <!-- CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- ===== HEADER ===== -->
-    <header>
-        <div class="logo">
-            <h1>Adeel Afzal</h1>
+    <!-- ===== CURSOR ===== -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursorFollower"></div>
+
+    <!-- ===== LOADER ===== -->
+    <div class="loader" id="loader">
+        <div class="loader-inner">
+            <span class="loader-text">AA</span>
+            <div class="loader-bar"><div class="loader-progress"></div></div>
         </div>
+    </div>
+
+    <!-- ===== HEADER ===== -->
+    <header id="header">
+        <a href="#home" class="logo">Adeel<span>.</span></a>
         <nav>
             <ul id="navMenu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#blog" class="nav-link">Blog</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </nav>
-        <div class="hamburger" id="hamburger" onclick="toggleMenu()">
-            <span></span><span></span><span></span>
+        <div class="header-right">
+            <a href="#contact" class="hire-btn">Hire Me</a>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </header>
 
+    <!-- ===== MOBILE NAV ===== -->
+    <div class="mobile-nav" id="mobileNav">
+        <ul>
+            <li><a href="#home" class="mob-link">Home</a></li>
+            <li><a href="#about" class="mob-link">About</a></li>
+            <li><a href="#skills" class="mob-link">Skills</a></li>
+            <li><a href="#projects" class="mob-link">Projects</a></li>
+            <li><a href="#blog" class="mob-link">Blog</a></li>
+            <li><a href="#contact" class="mob-link">Contact</a></li>
+        </ul>
+    </div>
+    <div class="mob-overlay" id="mobOverlay"></div>
+
     <!-- ===== HERO ===== -->
-    <section id="home">
-        <div class="hero-bg"></div>
-        <div class="hero-grid"></div>
-        <div class="hero-content">
-            <div class="hero-badge">Available for freelance work</div>
-            <h2>Hi, I'm <span class="grad">Adeel Afzal</span></h2>
-            <p class="hero-desc">A passionate Full Stack Web Developer crafting modern, fast, and responsive websites that make a real impact.</p>
-            <div class="hero-buttons">
-                <a href="#projects" class="btn btn-primary">View My Work ↗</a>
-                <a href="#contact" class="btn btn-outline">Hire Me</a>
+    <section id="home" class="hero">
+        <div class="hero-noise"></div>
+        <div class="hero-lines"></div>
+        <div class="hero-container">
+            <div class="hero-left">
+                <div class="hero-tag reveal">
+                    <span class="tag-dot"></span>
+                    Available for Freelance Work
+                </div>
+                <h1 class="hero-title reveal">
+                    <span class="line">Creative</span>
+                    <span class="line gold">Developer</span>
+                    <span class="line">&amp; Designer</span>
+                </h1>
+                <p class="hero-para reveal">
+                    Hi, I'm <strong>Adeel Afzal</strong> — a Full Stack Web Developer from Faisalabad, Pakistan. I build modern, fast, and beautiful digital experiences that leave a lasting impression.
+                </p>
+                <div class="hero-cta reveal">
+                    <a href="#projects" class="btn-gold">View My Work <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
+                    <a href="#contact" class="btn-ghost">Let's Talk</a>
+                </div>
+                <div class="hero-stats reveal">
+                    <div class="stat-item">
+                        <span class="stat-n">10<sup>+</sup></span>
+                        <span class="stat-l">Projects</span>
+                    </div>
+                    <div class="stat-div"></div>
+                    <div class="stat-item">
+                        <span class="stat-n">2<sup>+</sup></span>
+                        <span class="stat-l">Years Exp</span>
+                    </div>
+                    <div class="stat-div"></div>
+                    <div class="stat-item">
+                        <span class="stat-n">100<sup>%</sup></span>
+                        <span class="stat-l">Satisfaction</span>
+                    </div>
+                </div>
             </div>
-            <div class="hero-stats">
-                <div class="stat">
-                    <div class="stat-num">10+</div>
-                    <div class="stat-label">Projects Done</div>
+            <div class="hero-right reveal">
+                <div class="hero-card">
+                    <div class="hc-glow"></div>
+                    <div class="hc-avatar">AA</div>
+                    <div class="hc-name">Adeel Afzal</div>
+                    <div class="hc-role">Full Stack Developer</div>
+                    <div class="hc-location">📍 Faisalabad, Pakistan</div>
+                    <div class="hc-skills">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span><span>Git</span>
+                    </div>
+                    <div class="hc-status">
+                        <span class="hc-dot"></span> Open to Work
+                    </div>
                 </div>
-                <div class="stat">
-                    <div class="stat-num">2+</div>
-                    <div class="stat-label">Years Exp</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-num">100%</div>
-                    <div class="stat-label">Satisfaction</div>
-                </div>
+                <div class="floating-badge fb1">⚡ React</div>
+                <div class="floating-badge fb2">🎨 UI/UX</div>
+                <div class="floating-badge fb3">🔥 JavaScript</div>
             </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span>Scroll</span>
         </div>
     </section>
 
     <!-- ===== ABOUT ===== -->
-    <section id="about" class="section-pad">
+    <section id="about" class="section about-section">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Who I Am</span>
-                <h2>About Me</h2>
-            </div>
-            <div class="about-grid">
-                <div class="about-visual">
-                    <div class="about-card">
-                        <div class="about-glow"></div>
-                        <div class="about-avatar">AA</div>
-                        <div class="about-name">Adeel Afzal</div>
-                        <div class="about-role">Full Stack Web Developer</div>
-                        <div class="about-tags">
-                            <span class="tag">HTML & CSS</span>
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">React</span>
-                            <span class="tag">Git & GitHub</span>
-                            <span class="tag">Faisalabad, PK</span>
+            <div class="sec-label">Who I Am</div>
+            <div class="about-wrapper">
+                <div class="about-left">
+                    <h2 class="sec-title reveal">Turning Ideas<br><em>Into Reality</em></h2>
+                    <div class="about-img-box reveal">
+                        <div class="aib-inner">
+                            <div class="aib-avatar">AA</div>
+                            <div class="aib-exp">
+                                <span class="aib-n">2+</span>
+                                <span class="aib-l">Years of Experience</span>
+                            </div>
                         </div>
+                        <div class="aib-tag">Full Stack Developer</div>
                     </div>
                 </div>
-                <div class="about-text">
-                    <h3>Turning Ideas Into Reality</h3>
-                    <p>Hello! I am Adeel Afzal, a full-stack web developer based in Faisalabad, Pakistan. I love turning ideas into interactive and beautiful websites.</p>
-                    <p>With strong expertise in frontend technologies and a passion for clean, efficient code, I build digital experiences that are not just functional — but truly memorable.</p>
-                    <ul class="about-list">
-                        <li>2+ years of hands-on web development experience</li>
-                        <li>Proficient in React, JavaScript, HTML & CSS</li>
-                        <li>Focus on responsive, SEO-friendly design</li>
-                        <li>Open for freelance and remote projects</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-primary">Let's Work Together</a>
+                <div class="about-right">
+                    <p class="about-desc reveal">Hello! I'm <strong>Adeel Afzal</strong>, a passionate Full Stack Web Developer based in Faisalabad, Pakistan. I love crafting interactive, beautiful, and performance-focused websites that make a real impact.</p>
+                    <p class="about-desc reveal">With expertise in modern frontend technologies and a dedication to clean, efficient code, I create digital experiences that are not just functional — but truly memorable.</p>
+                    <div class="about-facts reveal">
+                        <div class="fact-row">
+                            <div class="fact-icon">🎯</div>
+                            <div>
+                                <strong>2+ Years</strong> of hands-on web development experience
+                            </div>
+                        </div>
+                        <div class="fact-row">
+                            <div class="fact-icon">⚡</div>
+                            <div>
+                                Proficient in <strong>React, JavaScript, HTML &amp; CSS</strong>
+                            </div>
+                        </div>
+                        <div class="fact-row">
+                            <div class="fact-icon">📱</div>
+                            <div>
+                                Focus on <strong>responsive, SEO-friendly</strong> design
+                            </div>
+                        </div>
+                        <div class="fact-row">
+                            <div class="fact-icon">🌍</div>
+                            <div>
+                                Open for <strong>freelance &amp; remote</strong> projects
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn-gold reveal">Let's Work Together <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ===== SKILLS ===== -->
-    <section id="skills" class="section-pad">
+    <section id="skills" class="section skills-section">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">What I Know</span>
-                <h2>My Skills</h2>
-                <p>Technologies I work with to build great digital experiences.</p>
+            <div class="sec-label">What I Know</div>
+            <h2 class="sec-title text-center reveal">My Skills &amp; <em>Expertise</em></h2>
+            <p class="sec-sub text-center reveal">Technologies I work with to build great digital experiences.</p>
+            <div class="skills-grid reveal">
+                <div class="skill-card">
+                    <div class="sk-icon">🎨</div>
+                    <div class="sk-info">
+                        <div class="sk-top">
+                            <span class="sk-name">HTML &amp; CSS</span>
+                            <span class="sk-pct">95%</span>
+                        </div>
+                        <div class="sk-bar"><div class="sk-fill" data-width="95"></div></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="sk-icon">⚡</div>
+                    <div class="sk-info">
+                        <div class="sk-top">
+                            <span class="sk-name">JavaScript</span>
+                            <span class="sk-pct">85%</span>
+                        </div>
+                        <div class="sk-bar"><div class="sk-fill" data-width="85"></div></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="sk-icon">⚛️</div>
+                    <div class="sk-info">
+                        <div class="sk-top">
+                            <span class="sk-name">React</span>
+                            <span class="sk-pct">80%</span>
+                        </div>
+                        <div class="sk-bar"><div class="sk-fill" data-width="80"></div></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="sk-icon">🐙</div>
+                    <div class="sk-info">
+                        <div class="sk-top">
+                            <span class="sk-name">Git &amp; GitHub</span>
+                            <span class="sk-pct">90%</span>
+                        </div>
+                        <div class="sk-bar"><div class="sk-fill" data-width="90"></div></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="sk-icon">📱</div>
+                    <div class="sk-info">
+                        <div class="sk-top">
+                            <span class="sk-name">Responsive Design</span>
+                            <span class="sk-pct">92%</span>
+                        </div>
+                        <div class="sk-bar"><div class="sk-fill" data-width="92"></div></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="sk-icon">🔍</div>
+                    <div class="sk-info">
+                        <div class="sk-top">
+                            <span class="sk-name">SEO Optimization</span>
+                            <span class="sk-pct">78%</span>
+                        </div>
+                        <div class="sk-bar"><div class="sk-fill" data-width="78"></div></div>
+                    </div>
+                </div>
             </div>
-            <div class="skills-grid">
-                <div class="skill-item">
-                    <div class="skill-top">
-                        <span class="skill-name"><span class="skill-icon">🎨</span> HTML & CSS</span>
-                        <span class="skill-percent">95%</span>
-                    </div>
-                    <div class="skill-bar"><div class="skill-level" style="width:95%"></div></div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-top">
-                        <span class="skill-name"><span class="skill-icon">⚡</span> JavaScript</span>
-                        <span class="skill-percent">85%</span>
-                    </div>
-                    <div class="skill-bar"><div class="skill-level" style="width:85%"></div></div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-top">
-                        <span class="skill-name"><span class="skill-icon">⚛️</span> React</span>
-                        <span class="skill-percent">80%</span>
-                    </div>
-                    <div class="skill-bar"><div class="skill-level" style="width:80%"></div></div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-top">
-                        <span class="skill-name"><span class="skill-icon">🐙</span> Git & GitHub</span>
-                        <span class="skill-percent">90%</span>
-                    </div>
-                    <div class="skill-bar"><div class="skill-level" style="width:90%"></div></div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-top">
-                        <span class="skill-name"><span class="skill-icon">📱</span> Responsive Design</span>
-                        <span class="skill-percent">92%</span>
-                    </div>
-                    <div class="skill-bar"><div class="skill-level" style="width:92%"></div></div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-top">
-                        <span class="skill-name"><span class="skill-icon">🔍</span> SEO Optimization</span>
-                        <span class="skill-percent">78%</span>
-                    </div>
-                    <div class="skill-bar"><div class="skill-level" style="width:78%"></div></div>
-                </div>
+            <!-- Tech Pills -->
+            <div class="tech-pills reveal">
+                <span>Node.js</span><span>Tailwind CSS</span><span>REST API</span><span>VS Code</span><span>Figma</span><span>Firebase</span><span>Bootstrap</span><span>MySQL</span>
             </div>
         </div>
     </section>
 
     <!-- ===== PROJECTS ===== -->
-    <section id="projects" class="section-pad">
+    <section id="projects" class="section projects-section">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">My Work</span>
-                <h2>Projects</h2>
-                <p>Some of the projects I have built with passion and precision.</p>
-            </div>
+            <div class="sec-label">My Work</div>
+            <h2 class="sec-title text-center reveal">Featured <em>Projects</em></h2>
+            <p class="sec-sub text-center reveal">Some of the projects I've built with passion and precision.</p>
             <div class="projects-grid">
 
-                <!-- Project 1: Portfolio -->
-                <div class="project-card">
-                    <div class="project-thumb">
-                        <svg viewBox="0 0 400 190" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-                            <defs>
-                                <linearGradient id="pg1" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" style="stop-color:#071a2f"/>
-                                    <stop offset="100%" style="stop-color:#0d2d50"/>
-                                </linearGradient>
-                                <linearGradient id="acc1" x1="0%" y1="0%" x2="100%" y2="0%">
-                                    <stop offset="0%" style="stop-color:#00e5ff"/>
-                                    <stop offset="100%" style="stop-color:#7c3aed"/>
-                                </linearGradient>
-                            </defs>
-                            <!-- BG -->
-                            <rect width="400" height="190" fill="url(#pg1)"/>
-                            <!-- Grid lines -->
-                            <line x1="0" y1="38" x2="400" y2="38" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
-                            <line x1="0" y1="76" x2="400" y2="76" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
-                            <line x1="0" y1="114" x2="400" y2="114" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
-                            <line x1="0" y1="152" x2="400" y2="152" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
-                            <line x1="80" y1="0" x2="80" y2="190" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
-                            <line x1="160" y1="0" x2="160" y2="190" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
-                            <line x1="240" y1="0" x2="240" y2="190" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
-                            <line x1="320" y1="0" x2="320" y2="190" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
-                            <!-- Nav bar mockup -->
-                            <rect x="20" y="14" width="360" height="22" rx="5" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
-                            <rect x="28" y="21" width="40" height="8" rx="3" fill="url(#acc1)" opacity="0.9"/>
-                            <rect x="278" y="22" width="28" height="6" rx="3" fill="rgba(255,255,255,0.12)"/>
-                            <rect x="314" y="22" width="28" height="6" rx="3" fill="rgba(255,255,255,0.12)"/>
-                            <rect x="350" y="22" width="22" height="6" rx="3" fill="rgba(255,255,255,0.12)"/>
-                            <!-- Hero text mockup -->
-                            <rect x="40" y="50" width="180" height="14" rx="4" fill="url(#acc1)" opacity="0.7"/>
-                            <rect x="40" y="70" width="140" height="8" rx="3" fill="rgba(255,255,255,0.18)"/>
-                            <rect x="40" y="84" width="120" height="8" rx="3" fill="rgba(255,255,255,0.10)"/>
-                            <!-- CTA Button -->
-                            <rect x="40" y="100" width="80" height="22" rx="11" fill="url(#acc1)" opacity="0.85"/>
-                            <rect x="130" y="100" width="68" height="22" rx="11" fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
-                            <!-- Right side decoration -->
-                            <circle cx="310" cy="100" r="50" fill="none" stroke="url(#acc1)" stroke-width="1" opacity="0.3"/>
-                            <circle cx="310" cy="100" r="35" fill="none" stroke="url(#acc1)" stroke-width="1" opacity="0.2"/>
-                            <circle cx="310" cy="100" r="20" fill="rgba(0,229,255,0.12)"/>
-                            <text x="299" y="106" font-family="sans-serif" font-size="16" fill="rgba(0,229,255,0.8)">AA</text>
-                            <!-- Dots -->
-                            <circle cx="340" cy="55" r="3" fill="#00e5ff" opacity="0.5"/>
-                            <circle cx="355" cy="70" r="2" fill="#7c3aed" opacity="0.5"/>
-                            <circle cx="270" cy="145" r="4" fill="#00e5ff" opacity="0.3"/>
-                        </svg>
-                        <div class="thumb-overlay"></div>
-                    </div>
-                    <div class="project-body">
-                        <h3>Personal Portfolio</h3>
-                        <p>A modern responsive portfolio website to showcase projects and skills with smooth animations.</p>
-                        <div class="project-techs">
-                            <span class="tech-tag">HTML</span>
-                            <span class="tech-tag">CSS</span>
-                            <span class="tech-tag">JavaScript</span>
+                <!-- Project 1 -->
+                <div class="proj-card reveal">
+                    <div class="proj-visual pv-1">
+                        <div class="pv-browser">
+                            <div class="pvb-bar">
+                                <div class="pvb-dots"><span></span><span></span><span></span></div>
+                                <div class="pvb-url">adeelafzal.dev</div>
+                            </div>
+                            <div class="pvb-screen">
+                                <div class="pvbs-nav"></div>
+                                <div class="pvbs-hero">
+                                    <div class="pvbs-line l1"></div>
+                                    <div class="pvbs-line l2"></div>
+                                    <div class="pvbs-btn"></div>
+                                </div>
+                            </div>
                         </div>
-                        <a href="https://adeelafzalwork-jp.github.io/portfolio/" target="_blank" class="btn-small">View Live ↗</a>
+                        <div class="proj-num">01</div>
+                    </div>
+                    <div class="proj-body">
+                        <div class="proj-tags">
+                            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                        </div>
+                        <h3>Personal Portfolio</h3>
+                        <p>A modern responsive portfolio website to showcase projects and skills with smooth animations and clean design.</p>
+                        <a href="https://adeelafzalwork-jp.github.io/portfolio/" target="_blank" class="proj-link">View Live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
                     </div>
                 </div>
 
-                <!-- Project 2: Todo App -->
-                <div class="project-card">
-                    <div class="project-thumb">
-                        <svg viewBox="0 0 400 190" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-                            <defs>
-                                <linearGradient id="pg2" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" style="stop-color:#0e0f1a"/>
-                                    <stop offset="100%" style="stop-color:#1a0b35"/>
-                                </linearGradient>
-                            </defs>
-                            <rect width="400" height="190" fill="url(#pg2)"/>
-                            <!-- App header -->
-                            <rect x="20" y="12" width="360" height="30" rx="6" fill="rgba(124,58,237,0.15)" stroke="rgba(124,58,237,0.25)" stroke-width="1"/>
-                            <text x="36" y="32" font-family="sans-serif" font-size="12" font-weight="bold" fill="#a78bfa">📋 Todo App</text>
-                            <!-- Input bar -->
-                            <rect x="20" y="52" width="290" height="26" rx="6" fill="rgba(255,255,255,0.04)" stroke="rgba(124,58,237,0.3)" stroke-width="1"/>
-                            <text x="32" y="69" font-family="sans-serif" font-size="10" fill="rgba(255,255,255,0.25)">Add a new task...</text>
-                            <rect x="318" y="52" width="62" height="26" rx="6" fill="rgba(124,58,237,0.6)"/>
-                            <text x="332" y="69" font-family="sans-serif" font-size="10" fill="white" font-weight="bold">+ Add</text>
-                            <!-- Todo items -->
-                            <rect x="20" y="88" width="360" height="24" rx="5" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
-                            <circle cx="36" cy="100" r="7" fill="none" stroke="#22c55e" stroke-width="2"/>
-                            <circle cx="36" cy="100" r="4" fill="#22c55e"/>
-                            <text x="52" y="104" font-family="sans-serif" font-size="10" fill="rgba(255,255,255,0.5)" text-decoration="line-through">Design homepage layout</text>
-                            <rect x="20" y="120" width="360" height="24" rx="5" fill="rgba(124,58,237,0.08)" stroke="rgba(124,58,237,0.2)" stroke-width="1"/>
-                            <circle cx="36" cy="132" r="7" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
-                            <text x="52" y="136" font-family="sans-serif" font-size="10" fill="rgba(255,255,255,0.75)">Build contact form</text>
-                            <rect x="20" y="152" width="360" height="24" rx="5" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
-                            <circle cx="36" cy="164" r="7" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
-                            <text x="52" y="168" font-family="sans-serif" font-size="10" fill="rgba(255,255,255,0.75)">Add dark mode toggle</text>
-                            <!-- Edit / delete icons -->
-                            <text x="356" y="136" font-family="sans-serif" font-size="11" fill="rgba(255,255,255,0.25)">✏</text>
-                            <text x="370" y="136" font-family="sans-serif" font-size="11" fill="rgba(255,100,100,0.4)">✕</text>
-                        </svg>
-                        <div class="thumb-overlay"></div>
+                <!-- Project 2 -->
+                <div class="proj-card reveal">
+                    <div class="proj-visual pv-2">
+                        <div class="pv-browser">
+                            <div class="pvb-bar">
+                                <div class="pvb-dots"><span></span><span></span><span></span></div>
+                                <div class="pvb-url">todo-app.js</div>
+                            </div>
+                            <div class="pvb-screen">
+                                <div class="pvbs-todo">
+                                    <div class="pvbs-todo-item done"><span class="pvbs-check done"></span><span class="pvbs-tl done">Design homepage</span></div>
+                                    <div class="pvbs-todo-item"><span class="pvbs-check"></span><span class="pvbs-tl">Build contact form</span></div>
+                                    <div class="pvbs-todo-item"><span class="pvbs-check"></span><span class="pvbs-tl">Add dark mode</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="proj-num">02</div>
                     </div>
-                    <div class="project-body">
+                    <div class="proj-body">
+                        <div class="proj-tags">
+                            <span>JavaScript</span><span>CSS</span><span>LocalStorage</span>
+                        </div>
                         <h3>Todo App</h3>
                         <p>A JavaScript-based Todo application to manage tasks with add, edit, delete and local storage functionality.</p>
-                        <div class="project-techs">
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">CSS</span>
-                            <span class="tech-tag">LocalStorage</span>
-                        </div>
-                        <a href="#" class="btn-small">View Live ↗</a>
+                        <a href="#" class="proj-link">View Live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
                     </div>
                 </div>
 
-                <!-- Project 3: Weather App -->
-                <div class="project-card">
-                    <div class="project-thumb">
-                        <svg viewBox="0 0 400 190" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-                            <defs>
-                                <linearGradient id="pg3" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" style="stop-color:#051525"/>
-                                    <stop offset="100%" style="stop-color:#0a2540"/>
-                                </linearGradient>
-                                <linearGradient id="sun" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" style="stop-color:#f59e0b"/>
-                                    <stop offset="100%" style="stop-color:#ef4444"/>
-                                </linearGradient>
-                            </defs>
-                            <rect width="400" height="190" fill="url(#pg3)"/>
-                            <!-- Clouds bg decoration -->
-                            <ellipse cx="320" cy="40" rx="55" ry="22" fill="rgba(255,255,255,0.04)"/>
-                            <ellipse cx="345" cy="32" rx="40" ry="18" fill="rgba(255,255,255,0.04)"/>
-                            <!-- Search bar -->
-                            <rect x="20" y="12" width="250" height="26" rx="13" fill="rgba(255,255,255,0.06)" stroke="rgba(0,229,255,0.25)" stroke-width="1"/>
-                            <text x="35" y="29" font-family="sans-serif" font-size="10" fill="rgba(255,255,255,0.4)">🔍  Search city...</text>
-                            <rect x="278" y="12" width="62" height="26" rx="13" fill="rgba(0,229,255,0.25)"/>
-                            <text x="292" y="29" font-family="sans-serif" font-size="10" fill="white" font-weight="bold">Search</text>
-                            <!-- Main weather card -->
-                            <rect x="20" y="48" width="170" height="130" rx="12" fill="rgba(255,255,255,0.04)" stroke="rgba(0,229,255,0.12)" stroke-width="1"/>
-                            <text x="35" y="72" font-family="sans-serif" font-size="11" fill="rgba(255,255,255,0.5)">Faisalabad, PK</text>
-                            <text x="35" y="105" font-family="sans-serif" font-size="34" font-weight="bold" fill="white">32°C</text>
-                            <text x="35" y="122" font-family="sans-serif" font-size="11" fill="rgba(0,229,255,0.7)">☀️  Sunny</text>
-                            <text x="35" y="152" font-family="sans-serif" font-size="9" fill="rgba(255,255,255,0.3)">Humidity: 45%  Wind: 12km/h</text>
-                            <text x="35" y="168" font-family="sans-serif" font-size="9" fill="rgba(255,255,255,0.3)">Feels like: 35°C</text>
-                            <!-- Sun decoration -->
-                            <circle cx="340" cy="105" r="28" fill="url(#sun)" opacity="0.15"/>
-                            <circle cx="340" cy="105" r="20" fill="url(#sun)" opacity="0.25"/>
-                            <text x="322" y="114" font-family="sans-serif" font-size="30">☀️</text>
-                            <!-- Mini forecast cards -->
-                            <rect x="205" y="130" width="46" height="46" rx="8" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
-                            <text x="215" y="148" font-family="sans-serif" font-size="11">🌤</text>
-                            <text x="214" y="165" font-family="sans-serif" font-size="9" fill="rgba(255,255,255,0.5)">Mon</text>
-                            <rect x="258" y="130" width="46" height="46" rx="8" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
-                            <text x="268" y="148" font-family="sans-serif" font-size="11">🌧</text>
-                            <text x="269" y="165" font-family="sans-serif" font-size="9" fill="rgba(255,255,255,0.5)">Tue</text>
-                            <rect x="311" y="130" width="46" height="46" rx="8" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
-                            <text x="321" y="148" font-family="sans-serif" font-size="11">☀️</text>
-                            <text x="322" y="165" font-family="sans-serif" font-size="9" fill="rgba(255,255,255,0.5)">Wed</text>
-                        </svg>
-                        <div class="thumb-overlay"></div>
+                <!-- Project 3 -->
+                <div class="proj-card reveal">
+                    <div class="proj-visual pv-3">
+                        <div class="pv-browser">
+                            <div class="pvb-bar">
+                                <div class="pvb-dots"><span></span><span></span><span></span></div>
+                                <div class="pvb-url">weather-app</div>
+                            </div>
+                            <div class="pvb-screen">
+                                <div class="pvbs-weather">
+                                    <div class="pvbs-wi">☀️</div>
+                                    <div class="pvbs-wtemp">32°C</div>
+                                    <div class="pvbs-wcity">Faisalabad, PK</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="proj-num">03</div>
                     </div>
-                    <div class="project-body">
+                    <div class="proj-body">
+                        <div class="proj-tags">
+                            <span>JavaScript</span><span>API</span><span>CSS</span>
+                        </div>
                         <h3>Weather App</h3>
                         <p>Realtime weather app using OpenWeather API to check weather anywhere in the world instantly.</p>
-                        <div class="project-techs">
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">API</span>
-                            <span class="tech-tag">CSS</span>
-                        </div>
-                        <a href="#" class="btn-small">View Live ↗</a>
+                        <a href="#" class="proj-link">View Live <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
                     </div>
                 </div>
 
@@ -378,162 +374,287 @@
     </section>
 
     <!-- ===== BLOG ===== -->
-    <section id="blog" class="section-pad">
+    <section id="blog" class="section blog-section">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">My Thoughts</span>
-                <h2>Latest Blog Posts</h2>
-                <p>I write about web development, tips, and the latest tech trends.</p>
-            </div>
+            <div class="sec-label">My Thoughts</div>
+            <h2 class="sec-title text-center reveal">Latest <em>Blog Posts</em></h2>
+            <p class="sec-sub text-center reveal">I write about web development, tips, and the latest tech trends.</p>
             <div class="blog-grid">
-                <article class="blog-card">
-                    <div class="blog-thumb blog-thumb-1">💻</div>
+
+                <article class="blog-card reveal">
+                    <div class="blog-thumb bt-1">
+                        <span class="bt-emoji">💻</span>
+                        <span class="bt-cat">HTML &amp; CSS</span>
+                    </div>
                     <div class="blog-body">
                         <div class="blog-meta">
-                            <span class="blog-cat">HTML & CSS</span>
-                            <span class="blog-date">Mar 10, 2026</span>
+                            <span class="blog-date">📅 Mar 10, 2026</span>
+                            <span class="blog-read">5 min read</span>
                         </div>
                         <h3>Top 10 CSS Tricks Every Developer Should Know</h3>
                         <p>Master these powerful CSS techniques to write cleaner, more efficient code and build stunning layouts faster.</p>
-                        <a href="#" class="read-more">Read More</a>
+                        <a href="#" class="blog-link">Read Article <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
                     </div>
                 </article>
-                <article class="blog-card">
-                    <div class="blog-thumb blog-thumb-2">⚛️</div>
+
+                <article class="blog-card reveal">
+                    <div class="blog-thumb bt-2">
+                        <span class="bt-emoji">⚛️</span>
+                        <span class="bt-cat">React</span>
+                    </div>
                     <div class="blog-body">
                         <div class="blog-meta">
-                            <span class="blog-cat">React</span>
-                            <span class="blog-date">Feb 22, 2026</span>
+                            <span class="blog-date">📅 Feb 22, 2026</span>
+                            <span class="blog-read">7 min read</span>
                         </div>
                         <h3>Getting Started with React Hooks in 2026</h3>
                         <p>A beginner-friendly guide to useState, useEffect, and custom hooks with real project examples you can use today.</p>
-                        <a href="#" class="read-more">Read More</a>
+                        <a href="#" class="blog-link">Read Article <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
                     </div>
                 </article>
-                <article class="blog-card">
-                    <div class="blog-thumb blog-thumb-3">🔍</div>
+
+                <article class="blog-card reveal">
+                    <div class="blog-thumb bt-3">
+                        <span class="bt-emoji">🔍</span>
+                        <span class="bt-cat">SEO</span>
+                    </div>
                     <div class="blog-body">
                         <div class="blog-meta">
-                            <span class="blog-cat">SEO</span>
-                            <span class="blog-date">Jan 15, 2026</span>
+                            <span class="blog-date">📅 Jan 15, 2026</span>
+                            <span class="blog-read">6 min read</span>
                         </div>
                         <h3>How to Make Your Website Rank #1 on Google</h3>
                         <p>Practical SEO strategies for developers — from meta tags and structured data to page speed and Core Web Vitals.</p>
-                        <a href="#" class="read-more">Read More</a>
+                        <a href="#" class="blog-link">Read Article <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
                     </div>
                 </article>
+
             </div>
         </div>
     </section>
 
-    <!-- ===== CONTACT (ORIGINAL - SAME) ===== -->
-    <section id="contact" class="section-pad">
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="section contact-section">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Get In Touch</span>
-                <h2>Contact Me</h2>
-                <p>If you want to work together or have any questions, feel free to send me a message.</p>
-            </div>
+            <div class="sec-label">Get In Touch</div>
+            <h2 class="sec-title text-center reveal">Let's Build Something <em>Amazing</em></h2>
+            <p class="sec-sub text-center reveal">Have a project in mind? Let's work together and bring your ideas to life.</p>
             <div class="contact-wrapper">
-                <div class="contact-left">
-                    <h3>Let's Build Something Amazing</h3>
-                    <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
-                    <div class="contact-details">
-                        <div class="contact-row">
-                            <div class="contact-icon">📧</div>
-                            <span>adeel.afzal.work@gmail.com</span>
+
+                <div class="contact-info reveal">
+                    <h3>Contact Information</h3>
+                    <p class="ci-sub">I'm always open to discussing new projects, creative ideas, or opportunities.</p>
+                    <div class="ci-items">
+                        <div class="ci-item">
+                            <div class="ci-icon">📧</div>
+                            <div class="ci-text">
+                                <span class="ci-label">Email</span>
+                                <span class="ci-val">adeel.afzal.work@gmail.com</span>
+                            </div>
                         </div>
-                        <div class="contact-row">
-                            <div class="contact-icon">📞</div>
-                            <span>+92 3064492183</span>
+                        <div class="ci-item">
+                            <div class="ci-icon">📞</div>
+                            <div class="ci-text">
+                                <span class="ci-label">Phone</span>
+                                <span class="ci-val">+92 3064492183</span>
+                            </div>
                         </div>
-                        <div class="contact-row">
-                            <div class="contact-icon">📍</div>
-                            <span>Faisalabad, Pakistan</span>
+                        <div class="ci-item">
+                            <div class="ci-icon">📍</div>
+                            <div class="ci-text">
+                                <span class="ci-label">Location</span>
+                                <span class="ci-val">Nankana Sahib, Pakistan</span>
+                            </div>
                         </div>
                     </div>
-                    <a href="https://wa.me/923064492183?text=Hello%20Adeel!" target="_blank" class="whatsapp-btn">
-                        💬 Chat on WhatsApp
+                    <a href="https://wa.me/923064492183?text=Hello%20Adeel!" target="_blank" class="wa-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        Chat on WhatsApp
                     </a>
+                    <div class="ci-social">
+                        <a href="https://github.com" target="_blank" class="soc-btn" title="GitHub">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="soc-btn" title="LinkedIn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" class="soc-btn" title="Twitter">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+                        </a>
+                    </div>
                 </div>
 
-                <div class="contact-form">
-                    <h3>Send a Message</h3>
+                <div class="contact-form reveal">
                     <form id="whatsappForm">
-                        <div class="form-group">
-                            <input type="text" name="name" id="name" placeholder="Your Name" required>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" placeholder="Adeel Afzal" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" placeholder="hello@example.com" required>
+                            </div>
                         </div>
                         <div class="form-group">
-                            <input type="email" name="email" id="email" placeholder="Your Email" required>
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="Project Discussion">
                         </div>
                         <div class="form-group">
-                            <textarea name="message" id="message" placeholder="Your Message" required></textarea>
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="Tell me about your project..." required></textarea>
                         </div>
-                        <button type="submit" class="btn">Send Message via WhatsApp 🚀</button>
+                        <button type="submit" class="btn-gold form-btn">
+                            Send via WhatsApp 🚀
+                        </button>
                     </form>
                 </div>
+
             </div>
         </div>
     </section>
 
     <!-- ===== FOOTER ===== -->
     <footer>
-        <span class="footer-logo">Adeel Afzal</span>
-        <p>&copy; 2026 Adeel Afzal. All Rights Reserved.</p>
-        <div class="footer-links">
-            <a href="#home">Home</a>
-            <a href="#blog">Blog</a>
-            <a href="#contact">Contact</a>
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="ft-brand">
+                    <span class="ft-logo">Adeel<span>.</span></span>
+                    <p>Crafting digital experiences that inspire and perform. Based in Faisalabad, Pakistan.</p>
+                </div>
+                <div class="ft-links">
+                    <div class="ftl-col">
+                        <h4>Navigation</h4>
+                        <a href="#home">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#skills">Skills</a>
+                        <a href="#projects">Projects</a>
+                    </div>
+                    <div class="ftl-col">
+                        <h4>More</h4>
+                        <a href="#blog">Blog</a>
+                        <a href="#contact">Contact</a>
+                        <a href="https://wa.me/923064492183" target="_blank">WhatsApp</a>
+                        <a href="mailto:adeel.afzal.work@gmail.com">Email</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Adeel Afzal. All Rights Reserved.</p>
+                <p>Made with ❤️ in Faisalabad, Pakistan</p>
+            </div>
         </div>
     </footer>
 
     <!-- Back to Top -->
-    <button id="back-top" onclick="scrollToTop()">↑</button>
+    <button id="back-top" aria-label="Back to top">↑</button>
 
-    <!-- ===== SCRIPTS ===== -->
+    <!-- ===== JS ===== -->
     <script>
-        // WhatsApp Form (ORIGINAL - SAME)
+        // ---- Loader ----
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('loader').classList.add('loaded');
+            }, 1200);
+        });
+
+        // ---- Custom Cursor ----
+        const cursor = document.getElementById('cursor');
+        const follower = document.getElementById('cursorFollower');
+        let mouseX = 0, mouseY = 0, followerX = 0, followerY = 0;
+        document.addEventListener('mousemove', e => {
+            mouseX = e.clientX; mouseY = e.clientY;
+            cursor.style.left = mouseX + 'px';
+            cursor.style.top = mouseY + 'px';
+        });
+        function animateFollower() {
+            followerX += (mouseX - followerX) * 0.1;
+            followerY += (mouseY - followerY) * 0.1;
+            follower.style.left = followerX + 'px';
+            follower.style.top = followerY + 'px';
+            requestAnimationFrame(animateFollower);
+        }
+        animateFollower();
+        document.querySelectorAll('a, button, .proj-card, .blog-card, .skill-card').forEach(el => {
+            el.addEventListener('mouseenter', () => { cursor.classList.add('hovered'); follower.classList.add('hovered'); });
+            el.addEventListener('mouseleave', () => { cursor.classList.remove('hovered'); follower.classList.remove('hovered'); });
+        });
+
+        // ---- Header scroll ----
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('scrolled', window.scrollY > 50);
+            document.getElementById('back-top').classList.toggle('show', window.scrollY > 500);
+        });
+
+        // ---- Mobile Nav ----
+        const hamburger = document.getElementById('hamburger');
+        const mobileNav = document.getElementById('mobileNav');
+        const mobOverlay = document.getElementById('mobOverlay');
+        function toggleNav() {
+            hamburger.classList.toggle('active');
+            mobileNav.classList.toggle('open');
+            mobOverlay.classList.toggle('show');
+            document.body.classList.toggle('nav-open');
+        }
+        hamburger.addEventListener('click', toggleNav);
+        mobOverlay.addEventListener('click', toggleNav);
+        document.querySelectorAll('.mob-link').forEach(l => l.addEventListener('click', toggleNav));
+
+        // ---- Back to Top ----
+        document.getElementById('back-top').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // ---- Scroll Reveal ----
+        const reveals = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) { e.target.classList.add('visible'); }
+            });
+        }, { threshold: 0.1 });
+        reveals.forEach(r => observer.observe(r));
+
+        // ---- Skill bars animate ----
+        const skillObserver = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    e.target.querySelectorAll('.sk-fill').forEach(bar => {
+                        bar.style.width = bar.dataset.width + '%';
+                    });
+                }
+            });
+        }, { threshold: 0.2 });
+        document.querySelectorAll('.skills-grid').forEach(g => skillObserver.observe(g));
+
+        // ---- WhatsApp Form ----
         document.getElementById('whatsappForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            let name = document.getElementById('name').value;
-            let email = document.getElementById('email').value;
-            let message = document.getElementById('message').value;
-            let fullMessage = `Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
-            let whatsappNumber = "923064492183";
-            let url = `https://wa.me/${whatsappNumber}?text=${fullMessage}`;
-            window.open(url, '_blank');
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            const text = `Name: ${name}%0AEmail: ${email}%0ASubject: ${subject}%0AMessage: ${message}`;
+            window.open(`https://wa.me/923064492183?text=${text}`, '_blank');
         });
 
-        // Hamburger menu
-        function toggleMenu() {
-            document.getElementById('navMenu').classList.toggle('open');
-        }
-        // Close menu on link click
-        document.querySelectorAll('#navMenu a').forEach(link => {
-            link.addEventListener('click', () => {
-                document.getElementById('navMenu').classList.remove('open');
-            });
-        });
-
-        // Back to Top
-        window.addEventListener('scroll', () => {
-            document.getElementById('back-top').classList.toggle('show', window.scrollY > 400);
-        });
-        function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        // Active nav highlight on scroll
+        // ---- Active Nav ----
         const sections = document.querySelectorAll('section[id]');
-        const navLinks = document.querySelectorAll('nav ul li a');
+        const navLinks = document.querySelectorAll('.nav-link');
         window.addEventListener('scroll', () => {
             let current = '';
             sections.forEach(sec => {
-                if (window.scrollY >= sec.offsetTop - 100) current = sec.getAttribute('id');
+                if (window.scrollY >= sec.offsetTop - 120) current = sec.id;
             });
             navLinks.forEach(link => {
-                link.style.color = (link.getAttribute('href') === '#' + current) ? 'var(--accent)' : '';
+                link.classList.toggle('active', link.getAttribute('href') === '#' + current);
             });
+        });
+
+        // ---- Floating badges animation ----
+        const badges = document.querySelectorAll('.floating-badge');
+        badges.forEach((b, i) => {
+            b.style.animationDelay = (i * 0.5) + 's';
         });
     </script>
 
